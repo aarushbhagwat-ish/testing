@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Square and Cube root calculator</title>
+</head>
+<body>
+Number: <input type="text" placeholder="Enter Number" id="n1"/><br>
+<select id="operator">
+<option value="Sqaure">Square Root</option>
+<option value="Cube">Cube Root</option>
+</select>
+<input type="button" value="Find" onclick="check();" id="btn1"/><br><br>
+<p id="result"></p>
+<script type="text/javascript">
+function check(){
+//All Variables
+var num = parseInt(document.getElementById("n1").value);
+var oper = document.getElementById("operator").value;
+
+//If Statements
+if(oper === "Sqaure"){
+document.getElementById("result").innerHTML = "The square root of " + num + " is " + Math.sqrt(num);
+}
+if(oper === "Cube"){
+document.getElementById("result").innerHTML = "The cube root of " + num + " is " + Math.cbrt(num);
+}
+}
+</script>
+<style type="text/css">
+body{
+user-select: none;
+}
+#btn1{
+cursor: pointer;
+}
+</style>
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  </style>
+  </head>
+  <body>
+  
+  
+  <a href="calc .html" class="button">DONE WITH WORK - GO BACKS</a>
+  
+  </body>
+  </html>
+  
+</body>
+</html>

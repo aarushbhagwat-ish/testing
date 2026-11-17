@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<title>calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="calc.css">
+<link rel="stylesheet" href="css/nav.css">
+<body>
+<div class="w3-container">
+
+        
+                  <!--navbar-->
+<div class="topnav">
+        <a href="index.html">Home</a>
+        <button onclick="myFunction()" class="dropbtn">Course & Quiz</button>
+        <div id="myDropdown" class="dropdown-content">
+          <h2><font color="red"> Courses</font></h2>
+          <a href="#about">English</a>
+          <a href="#contact">Maths</a>
+          <a href="#contact">HTML</a>
+          <a href="#contact">Python</a>
+          <a href="#contact">Qbasic</a><br>
+          <h2><font color="red">Quizez</font></h2>
+          <h3>English</h3>
+          <a href="#about">English</a>
+          <a href="#contact">Maths</a>
+          <a href="#contact">HTML</a>
+          <a href="#contact">Python</a>
+          <a href="#contact">Qbasic</a>
+          <h3>HTML</h3>
+          <a href="#about">English</a>
+          <a href="#contact">Maths</a>
+          <a href="#contact">HTML</a>
+          <a href="#contact">Python</a>
+          <a href="#contact">Qbasic</a>
+          <h3>Maths</h3>
+          <a href="#about">English</a>
+          <a href="#contact">Maths</a>
+          <a href="#contact">HTML</a>
+          <a href="#contact">Python</a>
+          <a href="#contact">Qbasic</a>
+          <h3>Python</h3>
+          <a href="#about">English</a>
+          <a href="#contact">Maths</a>
+          <a href="#contact">HTML</a>
+          <a href="#contact">Python</a>
+          <a href="#contact">Qbasic</a>
+          <h3>Qbasic</h3>
+          <a href="#about">English</a>
+          <a href="#contact">Maths</a>
+          <a href="#contact">HTML</a>
+          <a href="#contact">Python</a>
+          <a href="#contact">Qbasic</a>
+       </div>
+        <a  href="contact.html">Contact</a>
+        <a href="english.html">English</a>
+        <a class="active" href="maths.html">Maths</a>
+        <a href="HTML.html">HTML</a>
+        
+        <a href="#coming">Coming </a>
+        <a href="classes/index.html">Classes</a>
+        
+        <a href="#"><button onclick="myFunction2()">🌓  dark mode </button></a>
+        <div class="search-container">
+          <i ></i> <input type="search" value="" id="search" onchange="openPage()" placeholder="Type to search..">
+        </div>
+      </div>
+      </section>
+                  
+                  <h1 align="center">Calculators</h1>
+                  <h2>
+                         <u> Basic Calculator</u>
+                  </h2>
+                  <html>
+<head>
+	<script>
+		//function that display value
+		function dis(val)
+		{
+			document.getElementById("result").value+=val
+		}
+		
+		//function that evaluates the digit and return result
+		function solve()
+		{
+			let x = document.getElementById("result").value
+			let y = eval(x)
+			document.getElementById("result").value = y
+		}
+		
+		//function that clear the display
+		function clr()
+		{
+			document.getElementById("result").value = ""
+		}
+	</script>
+	<!-- for styling -->
+	<style>
+		.title{
+		margin-bottom: 10px;
+		text-align:center;
+		width: 210px;
+		color:green;
+		border: solid black 2px;
+		}
+
+		input[type="button"]
+		{
+		background-color:green;
+		color: black;
+		border: solid black 2px;
+		width:100%
+		}
+
+		input[type="text"]
+		{
+		background-color:white;
+		border: solid black 2px;
+		width:100%
+		}
+	</style>
+</head>
+<!-- create table -->
+<body>
+	
+	<table border="1">
+		<tr>
+			<td colspan="3"><input type="text" id="result"/></td>
+			<!-- clr() function will call clr to clear all value -->
+			<td><input type="button" value="c" onclick="clr()"/> </td>
+		</tr>
+		<tr>
+			<!-- create button and assign value to each button -->
+			<!-- dis("1") will call function dis to display value -->
+			<td><input type="button" value="1" onclick="dis('1')"/> </td>
+			<td><input type="button" value="2" onclick="dis('2')"/> </td>
+			<td><input type="button" value="3" onclick="dis('3')"/> </td>
+			<td><input type="button" value="/" onclick="dis('/')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="dis('4')"/> </td>
+			<td><input type="button" value="5" onclick="dis('5')"/> </td>
+			<td><input type="button" value="6" onclick="dis('6')"/> </td>
+			<td><input type="button" value="-" onclick="dis('-')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="dis('7')"/> </td>
+			<td><input type="button" value="8" onclick="dis('8')"/> </td>
+			<td><input type="button" value="9" onclick="dis('9')"/> </td>
+			<td><input type="button" value="+" onclick="dis('+')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="." onclick="dis('.')"/> </td>
+			<td><input type="button" value="0" onclick="dis('0')"/> </td>
+			<!-- solve function call function solve to evaluate value -->
+			<td><input type="button" value="=" onclick="solve()"/> </td>
+			<td><input type="button" value="*" onclick="dis('*')"/> </td>
+		</tr>
+	</table>
+</body>
+</html>
+
+                  
+<style>
+        .button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        </style>
+        </head>
+        <body>
+        
+        
+        
+        
+        <a href="calc-2.html" class="button">Scientific</a> <br> <br>
+        <a href="calc-scc.htm" class="button">Square Root and Cube Root Calculator</a>
+        
+        
+        
+
+
+  <!--scripts-->
+  <script src="search.js"></script>
+  <script src="js/mode.js"></script>
+  <script src="js/drop.js"></script>
+  <script src="js/script.js"></script>
+  
+  <link rel="stylesheet" href="css/mode.css">
+</body>
+</html>
